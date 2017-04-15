@@ -1,0 +1,22 @@
+#! /usr/bin/env zsh
+
+HOSTS=(`hostname`)
+
+DISPLAY=:0.0
+
+EDITOR='emacs -nw';
+PAGER='less';
+COLORTERM="yes"
+LSCOLORS="cxfxcxdxbxegedabagacad"
+
+[ -w $zsh_cache ] && HISTFILE=$zsh_cache/history
+
+DIRSTACKSIZE=32
+HISTSIZE=10000
+LISTMAX=1000
+NULLCMD='cat'
+REPORTTIME=2
+SAVEHIST=10000
+LOGCHECK=60
+watch=(notme)
+WORDCHARS="*?_-.[]~/&;!#$%^(){}<>"

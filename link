@@ -1,0 +1,30 @@
+#! /usr/bin/env bash
+
+# List all configuration files to be linked
+# They should be name exactly like they would be in $HOME,
+# but not hidden.
+CONFIG_FILES=(
+    emacs
+    gitconfig
+    zshrc
+    zsh.d
+)
+
+# Get the config path
+pushd $(dirname $0) > /dev/null
+CONFIG_PATH=$(pwd)
+popd > /dev/null
+
+echo "[+] Linking configuration from $CONFIG_PATH to $HOME:"
+
+cd $HOME
+echo
+
+# Link all configuration files
+for file in ${CONFIG_FILES[@]}; do
+    ln -fhs $CONFIG_PATH/$file .$file
+    echo "    .$file"
+done
+
+echo
+echo "[+] Done"

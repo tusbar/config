@@ -1,0 +1,26 @@
+[user]
+    name = Bertrand Marron
+    email = bertrand.marron@gmail.com
+    username = tusbar
+    signingKey = F5217D21
+
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+
+[alias]
+    co = checkout
+    b = branch
+    st = status
+    bd = log --left-right --graph --cherry-pick --oneline
+    cleanup = "!git branch --merged | grep  -v '\\*\\|master|release' | xargs -n 1 git branch -d"
+
+[tag]
+    sort = v:refname
+
+[commit]
+    gpgsign = true
+
+[url "git@github.com:"]
+    insteadOf = https://github.com/

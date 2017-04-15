@@ -1,0 +1,10 @@
+#! /usr/bin/env zsh
+
+GOPATH="${HOME}/go"
+
+PATH="\
+/usr/local/bin:\
+/usr/local/sbin:\
+${HOME}/bin:\
+${PATH}:\
+${GOPATH}/bin"
