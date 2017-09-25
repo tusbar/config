@@ -2,3 +2,6 @@
 
 # Disable two-finger back/forward navigation in Chrome
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
+
+# Show all files in finder
+defaults write com.apple.Finder AppleShowAllFiles YES
