@@ -5,3 +5,7 @@ defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 
 # Show all files in finder
 defaults write com.apple.Finder AppleShowAllFiles YES
+
+# iTerm2
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/config/plist"
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
