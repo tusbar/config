@@ -1,5 +1,6 @@
 #! /usr/bin/env zsh
 
+YARNPATH="${HOME}/.config/yarn/global/node_modules"
 GOPATH="${HOME}/go"
 
 PATH="\
@@ -7,4 +8,5 @@ PATH="\
 /usr/local/sbin:\
 ${HOME}/bin:\
 ${PATH}:\
+${YARNPATH}/.bin:\
 ${GOPATH}/bin"
