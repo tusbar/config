@@ -1,11 +1,65 @@
 #!/usr/bin/env sh
 
-# Disable two-finger back/forward navigation in Chrome
+# NSGlobalDomain
+
+## Show all file extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+## Expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+## Expand print panel by default
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
+
+# Desktop services
+
+## Disable the creation of .DS_Store on network volumes
+defaults write com.apple.DesktopServices DSDontWriteNetworkStores true
+
+## Disable the creation of .DS_Store on USB volumes
+defaults write com.apple.DesktopServices DSDontWriteUSBStores true
+
+
+# Finder
+
+## Show all files in finder
+defaults write com.apple.Finder AppleShowAllFiles -bool true
+
+## Show path bar
+defaults write com.apple.Finder ShowPathbar -bool true
+
+## Disable file extension change warning
+defaults write com.apple.Finder FXEnableExtensionChangeWarning -bool false
+
+# Dock
+
+## Auto-hide Dock
+defaults write com.apple.Dock autohide -bool true
+
+
+# Image Capture
+
+## Disable automatic opening
+defaults write com.apple.ImageCapture disableHotPlug -bool true
+
+
+# Preview
+
+## Disable auto-restore
+defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool false
+
+
+# Google Chrome
+
+## Disable two-finger back/forward navigation in Chrome
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 
-# Show all files in finder
-defaults write com.apple.Finder AppleShowAllFiles YES
 
 # iTerm2
-defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/config/plist"
+
+## Update plist location
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/config/plist"

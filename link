@@ -6,9 +6,12 @@
 CONFIG_FILES=(
     emacs
     gitconfig
+    zprofile
     zshrc
     zsh.d
 )
+
+SUB_CONFIG_FILES=$(ls config)
 
 # Get the config path
 pushd $(dirname $0) > /dev/null
@@ -24,6 +27,11 @@ echo
 for file in ${CONFIG_FILES[@]}; do
     ln -fhs $CONFIG_PATH/$file .$file
     echo "    .$file"
+done
+
+for file in ${SUB_CONFIG_FILES[@]}; do
+    ln -fhs $CONFIG_PATH/config/$file .config/$file
+    echo "    .config/$file"
 done
 
 echo

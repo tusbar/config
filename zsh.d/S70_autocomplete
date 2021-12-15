@@ -1,6 +1,11 @@
 #! /usr/bin/env zsh
 
-fpath=(/usr/local/share/zsh-completions $fpath)
+autoload -Uz compinit
+
+if type brew &>/dev/null
+then
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
 
 zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
 zstyle -e ':completion:*:approximate:*' max-errors \
@@ -30,3 +35,8 @@ zstyle ':completion:*:functions' ignored-patterns '_*'
 zstyle ':completion:*:*:(^rm):*:*files' ignored-patterns '*?.o' '*?.c~' '*?.old' '*?.pro'
 zstyle ':completion:*:functions' ignored-patterns '_*'
 zstyle :compinstall filename "${HOME}/.zshrc"
+
+if [ ${UID} -ne 0 ]
+then
+    compinit
+fi

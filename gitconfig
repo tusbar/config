@@ -2,7 +2,6 @@
     name = Bertrand Marron
     email = bertrand.marron@gmail.com
     username = tusbar
-    signingKey = F5217D21
 
 [color]
     branch = auto
@@ -21,6 +20,7 @@
 
 [tag]
     sort = v:refname
+    gpgsign = true
 
 [branch]
     sort = -committerdate
@@ -28,16 +28,21 @@
 [commit]
     gpgsign = true
 
-[url "git@github.com:"]
-    insteadOf = https://github.com/
-
-[url "git@bitbucket.org:"]
-    insteadOf = https://bitbucket.org/
-
 [github]
     user = tusbar
 
 [core]
     excludesfile = /Users/tusbar/.gitignore
+
 [gpg]
-	program = gpg
+    format = ssh
+
+[gpg "ssh"]
+    defaultKeyCommand = ssh-add -L
+    allowedSignersFile = /Users/tusbar/.config/git/allowed_signers
+
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+
+[url "git@bitbucket.org:"]
+    insteadOf = https://bitbucket.org/
