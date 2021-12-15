@@ -5,6 +5,7 @@ alias l='ls -l'
 alias ll='ls -lh'
 alias la='ls -la'
 alias du='du -h'
+alias ne='emacs -nw'
 alias cp='nocorrect cp'
 alias mv='nocorrect mv -v'
 alias rm='rm -v'
@@ -12,5 +13,3 @@ alias mkdir='nocorrect mkdir'
 alias grep='grep --color=auto'
 alias less='less -R'
 alias reload="source ${HOME}/.zshrc"
-
-alias popcorn='cd /private/var/folders/wb/4xx5dj9j0r12lym3mgxhj0l00000gn/T/Popcorn-Time'

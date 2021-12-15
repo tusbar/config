@@ -15,13 +15,29 @@
     st = status
     bd = log --left-right --graph --cherry-pick --oneline
     rc = rebase --continue
-    cleanup = "!git branch --merged | grep  -v '\\*\\|master|release' | xargs -n 1 git branch -d"
+    cleanup-merged = "!echo 'Deleting merged branches…'; git branch --merged | grep  -v '* master' | xargs -n 1 git branch -d; echo 'Done.'"
+    cleanup-squashed = "!echo 'Deleting squashed branches…'; git for-each-ref refs/heads/ '--format=%(refname:short)' | while read branch; do mergeBase=$(git merge-base master $branch) && [[ $(git cherry master $(git commit-tree $(git rev-parse $branch'^{tree}') -p $mergeBase -m _)) == -* ]] && git branch -D $branch; done; echo 'Done.'"
+    btm = "!git fetch --prune && git checkout -q master && git merge --ff-only origin/master && git cleanup-squashed && git cleanup-merged"
 
 [tag]
     sort = v:refname
+
+[branch]
+    sort = -committerdate
 
 [commit]
     gpgsign = true
 
 [url "git@github.com:"]
     insteadOf = https://github.com/
+
+[url "git@bitbucket.org:"]
+    insteadOf = https://bitbucket.org/
+
+[github]
+    user = tusbar
+
+[core]
+    excludesfile = /Users/tusbar/.gitignore
+[gpg]
+	program = gpg

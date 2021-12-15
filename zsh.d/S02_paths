@@ -2,11 +2,14 @@
 
 YARNPATH="${HOME}/.config/yarn/global/node_modules"
 GOPATH="${HOME}/go"
+PYENV_ROOT="${HOME}/.pyenv"
 
 PATH="\
 /usr/local/bin:\
 /usr/local/sbin:\
 ${HOME}/bin:\
 ${PATH}:\
+${PYENV_ROOT}/bin:\
 ${YARNPATH}/.bin:\
+${HOME}/.poetry/bin:\
 ${GOPATH}/bin"

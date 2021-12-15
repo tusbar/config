@@ -11,6 +11,7 @@ LSCOLORS="cxfxcxdxbxegedabagacad"
 
 [ -w $zsh_cache ] && HISTFILE=$zsh_cache/history
 
+LANG=en_US.UTF-8
 DIRSTACKSIZE=32
 HISTSIZE=10000
 LISTMAX=1000
