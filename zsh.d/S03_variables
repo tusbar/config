@@ -2,12 +2,10 @@
 
 HOSTS=(`hostname`)
 
-DISPLAY=:0.0
-
-EDITOR='emacs -nw';
-PAGER='less';
-COLORTERM="yes"
-LSCOLORS="cxfxcxdxbxegedabagacad"
+EDITOR='emacs -nw'
+PAGER='less'
+COLORTERM='yes'
+LSCOLORS='cxfxcxdxbxegedabagacad'
 
 [ -w $zsh_cache ] && HISTFILE=$zsh_cache/history
 
@@ -20,4 +18,4 @@ REPORTTIME=2
 SAVEHIST=10000
 LOGCHECK=60
 watch=(notme)
-WORDCHARS="*?_-.[]~/&;!#$%^(){}<>"
+WORDCHARS='*?_-.[]~/&;!#$%^(){}<>'
