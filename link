@@ -6,6 +6,7 @@
 CONFIG_FILES=(
     emacs
     gitconfig
+    gitignore
     zprofile
     zshrc
     zsh.d
