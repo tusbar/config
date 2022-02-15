@@ -33,6 +33,7 @@
 
 [core]
     excludesfile = /Users/tusbar/.gitignore
+    editor = code --wait
 
 [gpg]
     format = ssh
