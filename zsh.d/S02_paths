@@ -4,6 +4,9 @@ PYENV_ROOT="${HOME}/.pyenv"
 
 PATH="\
 ${HOME}/bin:\
-${PATH}:\
+${HOME}/.yarn/bin:\
+${HOME}/.config/yarn/global/node_modules/.bin:\
+${HOME}/.local/bin:\
 ${PYENV_ROOT}/bin:\
-${HOME}/.poetry/bin"
+/opt/homebrew/opt/openjdk/bin:\
+${PATH}:"
