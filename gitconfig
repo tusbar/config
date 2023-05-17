@@ -17,6 +17,7 @@
     cleanup-merged = "!echo 'Deleting merged branches…'; git branch --merged | grep  -v '* master' | xargs -n 1 git branch -d; echo 'Done.'"
     cleanup-squashed = "!echo 'Deleting squashed branches…'; git for-each-ref refs/heads/ '--format=%(refname:short)' | while read branch; do mergeBase=$(git merge-base master $branch) && [[ $(git cherry master $(git commit-tree $(git rev-parse $branch'^{tree}') -p $mergeBase -m _)) == -* ]] && git branch -D $branch; done; echo 'Done.'"
     btm = "!git fetch --prune && git checkout -q master && git merge --ff-only origin/master && git cleanup-squashed && git cleanup-merged"
+    rbm = "!git fetch && git rebase origin/master"
 
 [tag]
     sort = v:refname

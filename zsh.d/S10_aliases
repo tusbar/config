@@ -13,3 +13,4 @@ alias mkdir='nocorrect mkdir'
 alias grep='grep --color=auto'
 alias less='less -R'
 alias reload="source ${HOME}/.zshrc"
+alias pn='pnpm'
