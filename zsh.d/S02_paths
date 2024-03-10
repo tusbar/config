@@ -1,12 +1,13 @@
 #! /usr/bin/env zsh
 
 PYENV_ROOT="${HOME}/.pyenv"
+PNPM_HOME="${HOME}/Library/pnpm"
 
 PATH="\
-${HOME}/bin:\
+${PNPM_HOME}:\
 ${HOME}/.yarn/bin:\
 ${HOME}/.config/yarn/global/node_modules/.bin:\
 ${HOME}/.local/bin:\
 ${PYENV_ROOT}/bin:\
 /opt/homebrew/opt/openjdk/bin:\
-${PATH}:"
+${PATH}"
