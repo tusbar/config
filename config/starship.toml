@@ -12,3 +12,6 @@ disabled = true
 [shlvl]
 disabled = false
 symbol = '≡ '
+
+[docker_context]
+disabled = true
