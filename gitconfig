@@ -33,7 +33,7 @@
     user = tusbar
 
 [core]
-    excludesfile = /Users/tusbar/.gitignore
+    excludesfile = ~/.gitignore
     # editor = code --wait
 
 [gpg]
@@ -41,7 +41,7 @@
 
 [gpg "ssh"]
     defaultKeyCommand = ssh-add -L
-    allowedSignersFile = /Users/tusbar/.config/git/allowed_signers
+    allowedSignersFile = ~/.config/git/allowed_signers
 
 [url "git@github.com:"]
     insteadOf = https://github.com/
