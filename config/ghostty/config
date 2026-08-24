@@ -1,0 +1,21 @@
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+font-family = "FiraCode Nerd Font Mono"
+font-size = 11
+
+theme = Sublette
+split-divider-color = #44475a
+
+cursor-style = underline
+cursor-style-blink = false
+
+window-inherit-font-size = true
+window-padding-x = 4
+window-padding-y = 2
+window-position-x = 0
+window-position-y = 0
+
+unfocused-split-opacity = 1
+
+shell-integration-features = sudo,no-cursor
